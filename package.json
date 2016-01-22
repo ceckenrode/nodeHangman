@@ -1,0 +1,30 @@
+{
+  "name": "nodehangman",
+  "version": "1.0.0",
+  "description": "A node command line hangman application",
+  "main": "main.js",
+  "dependencies": {
+    "prompt": "^0.2.14"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ceckenrode/nodeHangman.git"
+  },
+  "keywords": [
+    "hangman",
+    "command",
+    "line",
+    "javascript",
+    "node"
+  ],
+  "author": "Christian Eckenrode",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ceckenrode/nodeHangman/issues"
+  },
+  "homepage": "https://github.com/ceckenrode/nodeHangman#readme"
+}

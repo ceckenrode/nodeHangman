@@ -7,7 +7,7 @@ function Letter(let) {
       if (this.appear === false) {
         return "_";
       } else {
-        return charac;
+        return this.charac;
       }
     }
 }

@@ -1,4 +1,5 @@
 var Letter = require("./letter.js");
+module.exports = Word;
 
 function Word(wrd) {
   this.word = wrd,
@@ -12,15 +13,33 @@ function Word(wrd) {
     this.checkIfLetterFound = function(guessLetter) {
       var numLettersFound = 0;
       for (var i = 0; i < this.lets.length; i++) {
-        if (guessLetter === this.lets[i].charac) {
+        if (guessLetter.toLowerCase() === this.lets[i].charac.toLowerCase()) {
           this.lets[i].appear = true;
           numLettersFound++;
         }
       };
       return numLettersFound;
+    },
+    this.didWeFindTheWord = function() {
+      if (this.lets.every(function(curLet) {
+          return curLet.appear === true;
+        })) {
+        this.found = true;
+      }
+      return this.found;
+    },
+    this.wordRender = function() {
+      var str = "";
+      for (var i = 0; i < this.lets.length; i++) {
+        str += this.lets[i].letterRender() + " ";
+      };
+      return str;
     }
 }
-var test = new Word("hello");
+
+
+var test = new Word("e");
 test.getLets();
 test.checkIfLetterFound("e");
-console.log(test.lets[1]);
+test.didWeFindTheWord();
+console.log(test.didWeFindTheWord());

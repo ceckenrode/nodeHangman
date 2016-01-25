@@ -44,7 +44,7 @@ var game = {
           console.log("You guessed wrong!");
           self.guessRemaining--;
         } else {
-          conso√le.log(hangedMan[self.guessRemaining]);
+          console.log(hangedMan[self.guessRemaining]);
           console.log("You guessed right!")
           if (self.currentWrd.didWeFindTheWord() === true) {
             console.log(hangedMan[self.guessRemaining]);
